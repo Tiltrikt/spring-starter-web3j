@@ -1,0 +1,5 @@
+web3j:
+  network: "https://testnet.ton.dev"
+  #  network: "https://data-seed-prebsc-1-s1.bnbchain.org:8545/"
+  contract: "0xAD4AdD81B11b4951c87bdb2eb0F4aC8e0fE06712"
+#  decimals: 18    # count of numbers after pointer (if decimals == 2 then 0,00)
