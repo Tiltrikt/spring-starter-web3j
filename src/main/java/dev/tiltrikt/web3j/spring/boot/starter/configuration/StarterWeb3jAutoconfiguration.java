@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +21,6 @@ public class StarterWeb3jAutoconfiguration {
 
   @Bean
   @ConditionalOnMissingBean(Web3j.class)
-  @ConditionalOnProperty(value = "web3j.decimals", havingValue = "43")
   public Web3j web3j() {
     return Web3j.build(new HttpService(starterWeb3jProperties.getNetwork()));
   }
